@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/groupFragment">
+
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.globomantics.runtasticcodingcontest.GroupFragment"
+        android:label="fragment_group_list"
+        tools:layout="@layout/fragment_group_list" >
+        <action
+            android:id="@+id/action_groupFragment_to_memberFragment"
+            app:destination="@id/memberFragment"
+            app:popUpTo="@id/groupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberFragment"
+        android:name="com.globomantics.runtasticcodingcontest.MemberFragment"
+        android:label="fragment_member_list"
+        tools:layout="@layout/fragment_member_list" />
+</navigation>
